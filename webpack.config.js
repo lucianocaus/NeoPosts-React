@@ -1,34 +1,39 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devServer: {
+    historyApiFallback: true,
+  },
+  entry: { index: path.resolve(__dirname, 'src', 'index.js') },
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader",]
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
-      }
-    ]
+        use: ['babel-loader'],
+      },
+    ],
   },
 
   output: {
-    path: path.resolve(__dirname, "build")
-  }, 
+    path: path.resolve(__dirname, 'build'),
+  },
 
   mode: 'development',
 
   optimization: {
-    splitChunks: { chunks: "all" }
+    splitChunks: { chunks: 'all' },
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "index.html")
-    })
-  ]
+      template: path.resolve(__dirname, 'src', 'index.html'),
+      publicPath: '/',
+    }),
+  ],
 };
