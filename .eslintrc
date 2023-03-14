@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "parser": "@babel/eslint-parser",
+  "plugins": [],
+  "extends": [
+    "airbnb",
+    "eslint:recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules":{
+    "no-shadow": ["error"],
+    "no-unused-vars": ["error", {
+      "varsIgnorePattern": "^_"
+    }],
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "prefer-arrow-callback": "error",
+    "react/function-component-definition": [2, {
+      "namedComponents": "arrow-function",
+      "unnamedComponents": "arrow-function"
+    }],
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".js", ".jsx"]
+    }],
+    "react/jsx-no-literals": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0
+  }
+}
