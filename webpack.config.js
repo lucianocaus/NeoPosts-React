@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+const aliases = require('./src/aliases');
 
 module.exports = {
   devServer: {
@@ -9,13 +11,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
       },
     ],
   },
@@ -35,5 +41,11 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'index.html'),
       publicPath: '/',
     }),
+    new Dotenv(),
   ],
+
+  resolve: {
+    alias: aliases,
+    extensions: ['.js', '.jsx'],
+  },
 };

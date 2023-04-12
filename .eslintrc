@@ -21,6 +21,7 @@
       "namedComponents": "arrow-function",
       "unnamedComponents": "arrow-function"
     }],
+    "react/require-default-props": "off",
     "react/jsx-filename-extension": [1, {
       "extensions": [".js", ".jsx"]
     }],

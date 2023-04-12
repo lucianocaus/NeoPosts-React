@@ -1,6 +1,33 @@
+@import './styles/constants.scss';
 
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   color: #0033ff;
-  background: linear-gradient(red, yellow, rgb(166, 255, 0), orange);
+  margin: 0;
+  background-color: $light_yellow;
+  background-image: linear-gradient(
+      45deg,
+      $light_purple 25%,
+      transparent 25%,
+      transparent 75%,
+      $light_purple 75%,
+      $light_purple
+    ),
+    linear-gradient(
+      -45deg,
+      $light_purple 25%,
+      transparent 25%,
+      transparent 75%,
+      $light_purple 75%,
+      $light_purple
+    );
+  background-size: 60px 60px;
+  background-position: 0 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
 }
