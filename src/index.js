@@ -1,12 +1,12 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { render } from 'react-dom';
+
+import App from './containers/App';
 
 import './style.scss';
 
-const App = () => (
-  <div>
-    <h1>Boeeenas</h1>
-  </div>
-);
-
-render(<App />, document.getElementById('app'));
+render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>), document.getElementById('app'));

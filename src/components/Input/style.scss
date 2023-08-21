@@ -1,0 +1,21 @@
+@import '../../styles/constants.scss';
+
+.retro__input {
+  outline: none;
+  margin: 15px;
+  padding: 7px 0 7px 14px;
+  border: 3px solid #969696;
+  box-shadow: 0 0 0 1px $gray,
+    inset 0 0 0 1px $gray,
+    1px 2px 0 2px #646464;
+  border-radius: 0.3em;
+  color: $dark_gray;
+  font: 600 1.3em $retro_font;
+  width: calc(100% - 50px);
+
+  &:focus {
+    box-shadow: 0 0 0 1px $gray,
+      inset 0 0 0 1px $gray,
+      1px 2px 0 1px #646464;
+  }
+}

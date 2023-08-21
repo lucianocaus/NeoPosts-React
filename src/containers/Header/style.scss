@@ -1,0 +1,35 @@
+@import '../../styles/constants.scss';
+
+header {
+  background-color: $purple;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px;
+
+    .header {
+      &__logo {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 175px;
+        }
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        padding-right: 25px;
+        font: bold 25px $neoposteos_font;
+        
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

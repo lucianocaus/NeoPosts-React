@@ -1,0 +1,22 @@
+@import '../../styles/constants.scss';
+
+.button {
+  background: $light_purple;
+  border-bottom: $transparent_black_border;
+  border-left: $transparent_black_border;
+  border-right: $transparent_gray_border;
+  border-top: $transparent_gray_border;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font: 600 1.5rem $retro_font;
+  margin: .7rem;
+  min-width: 200px;
+  padding: .5rem;
+  width: auto;
+
+  &:focus, &:hover {
+    background: $lighter_purple;
+  }
+}
