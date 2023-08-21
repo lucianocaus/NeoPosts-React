@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <Sidebar />
+      { user && <Sidebar /> }
       { user && <Posts /> }
     </div>
   );
