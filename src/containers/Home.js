@@ -1,12 +1,16 @@
 import React from 'react';
 
+import Sidebar from 'components/Sidebar';
+import Posts from 'components/Posts';
+
 const Home = () => {
-  const user = localStorage.getItem('authentication');
+  const user = localStorage.getItem('currentUser');
 
   return (
-    <h1>
-      Benvindo {user ? ` ${JSON.parse(user).uid}` : '' }
-    </h1>
+    <div className="home-container">
+      <Sidebar />
+      { user && <Posts /> }
+    </div>
   );
 };
 

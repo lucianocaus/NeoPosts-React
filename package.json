@@ -8,7 +8,8 @@
     "start": "webpack serve --open",
     "build": "webpack --mode production",
     "prepare": "husky install",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "test": "stylelint '**/*.scss' --fix && eslint . --fix --ignore-path .eslintignore"
   },
   "keywords": [],
   "author": "",
@@ -33,7 +34,6 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
-    "prop-types": "^15.8.1",
     "react-app-rewire-alias": "^1.1.7",
     "react-app-rewired": "^2.2.1",
     "react-favicon": "^2.0.3",
@@ -41,8 +41,9 @@
     "sass": "^1.54.4",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
-    "stylelint": "^14.10.0",
-    "stylelint-config-standard": "^27.0.0",
+    "stylelint": "^15.4.0",
+    "stylelint-config-standard": "^32.0.0",
+    "stylelint-config-standard-scss": "^8.0.0",
     "webpack": "^5.76.2",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.0"
@@ -53,9 +54,11 @@
     "babel-plugin-macros": "^3.1.0",
     "classnames": "^2.3.2",
     "moment": "^2.29.4",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.5",
+    "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.9.0",
     "react-toastify": "^9.1.2"
   }

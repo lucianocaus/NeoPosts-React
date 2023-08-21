@@ -39,47 +39,45 @@ const SignUp = () => {
   };
 
   return (
-    <Box containerClassName="signup-box">
-      <div>
-        <div className="box-header">
-          <p>
-            NeoPosteos
-          </p>
+    <div className="signup">
+      <Box>
+        <div className="signup__title">
+          NeoPosteos
         </div>
-      </div>
-      <form onSubmit={handleSubmit(onSubmitHandler)}>
-        <Input
-          placeholder="Name"
-          id="name"
-          type="text"
-          {...register('name', { required: true })}
-        />
-        <Input
-          placeholder="Email"
-          id="email"
-          type="email"
-          {...register('email', { required: true })}
-        />
-        <Input
-          placeholder="Password"
-          id="password"
-          type="password"
-          {...register('password', { required: true })}
-        />
-        <Input
-          placeholder="Password Confirmation"
-          id="passwordConfirmation"
-          type="password"
-          {...register('passwordConfirmation', { required: true })}
-        />
-        <div className="submit-btn">
-          <Button
-            text="SignUp"
-            type="submit"
+        <form onSubmit={handleSubmit(onSubmitHandler)}>
+          <Input
+            placeholder="Name"
+            id="name"
+            type="text"
+            {...register('name', { required: true })}
           />
-        </div>
-      </form>
-    </Box>
+          <Input
+            placeholder="Email"
+            id="email"
+            type="email"
+            {...register('email', { required: true })}
+          />
+          <Input
+            placeholder="Password"
+            id="password"
+            type="password"
+            {...register('password', { required: true })}
+          />
+          <Input
+            placeholder="Password Confirmation"
+            id="passwordConfirmation"
+            type="password"
+            {...register('passwordConfirmation', { required: true })}
+          />
+          <div className="submit-btn">
+            <Button
+              text="SignUp"
+              type="submit"
+            />
+          </div>
+        </form>
+      </Box>
+    </div>
   );
 };
 

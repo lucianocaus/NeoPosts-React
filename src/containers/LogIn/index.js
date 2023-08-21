@@ -20,7 +20,15 @@ const Login = () => {
     password,
   }) => {
     login(email, password)
-      .then(({ headers }) => {
+      .then(({ headers, data: { data } }) => {
+        localStorage.setItem(
+          'currentUser',
+          JSON.stringify({
+            userName: data.name,
+            userEmail: data.email,
+            userId: data.id,
+          }),
+        );
         localStorage.setItem(
           'authentication',
           JSON.stringify({
@@ -45,39 +53,41 @@ const Login = () => {
   };
 
   return (
-    <Box containerClassName="login__box">
-      <div className="box__title">
-        NeoPosteos
-      </div>
-      <form onSubmit={handleSubmit(onSubmitHandler)}>
-        <Input
-          placeholder="Email"
-          id="email"
-          type="email"
-          {...register('email', { required: true })}
-        />
-        <Input
-          placeholder="Password"
-          id="password"
-          type="password"
-          {...register('password', { required: true })}
-        />
-        <div className="submit-btn">
-          <Button
-            text="SignUp"
-            type="submit"
+    <div className="login">
+      <Box>
+        <div className="login__title">
+          NeoPosteos
+        </div>
+        <form onSubmit={handleSubmit(onSubmitHandler)}>
+          <Input
+            placeholder="Email"
+            id="email"
+            type="email"
+            {...register('email', { required: true })}
           />
-        </div>
-        <div className="signup-link">
-          <p>
-            Don&apos;t have an account?
-            Shame on you!
-            <br />
-            <Link to="/signup">Sign Up</Link>
-          </p>
-        </div>
-      </form>
-    </Box>
+          <Input
+            placeholder="Password"
+            id="password"
+            type="password"
+            {...register('password', { required: true })}
+          />
+          <div className="submit-btn">
+            <Button
+              text="Login"
+              type="submit"
+            />
+          </div>
+          <div className="login__link">
+            <p>
+              Don&apos;t have an account?
+              Shame on you!
+              <br />
+              <Link to="/signup">Sign Up</Link>
+            </p>
+          </div>
+        </form>
+      </Box>
+    </div>
   );
 };
 export default Login;

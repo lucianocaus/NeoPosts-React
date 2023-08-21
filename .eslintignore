@@ -1,0 +1,13 @@
+# ignore built files
+build/
+
+# ignore vendor files
+vendor/
+
+# ignore generated code
+generated/
+
+# ignore test files
+**/__tests__/*
+
+dist/

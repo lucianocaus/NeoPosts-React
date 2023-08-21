@@ -10,7 +10,7 @@ const Input = forwardRef(({
 }, ref) => (
   <input
     ref={ref}
-    className="retro__input"
+    className="retro-input"
     placeholder={placeholder}
     id={id}
     type={type}

@@ -1,22 +1,22 @@
-@import '../../styles/constants.scss';
+@import '../../styles/constants';
 
 .button {
-  background: $light_purple;
-  border-bottom: $transparent_black_border;
-  border-left: $transparent_black_border;
-  border-right: $transparent_gray_border;
-  border-top: $transparent_gray_border;
+  background: $light-purple;
+  border-bottom: $transparent-black-border;
+  border-left: $transparent-black-border;
+  border-right: $transparent-gray-border;
+  border-top: $transparent-gray-border;
   box-sizing: border-box;
   color: white;
   cursor: pointer;
   display: inline-block;
-  font: 600 1.5rem $retro_font;
+  font: 600 1.5rem $retro-font;
   margin: .7rem;
   min-width: 200px;
   padding: .5rem;
   width: auto;
 
   &:focus, &:hover {
-    background: $lighter_purple;
+    background: $lighter-purple;
   }
 }

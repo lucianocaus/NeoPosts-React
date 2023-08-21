@@ -1,39 +1,21 @@
-@import url('https://fonts.cdnfonts.com/css/vantage-brk');
-@import '../../styles/constants.scss';
-
-@import '../../styles/constants.scss';
+@import 'https://fonts.cdnfonts.com/css/vantage-brk';
+@import '../../styles/constants';
 
 .signup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 90vh;
+  width: 500px;
 
-  &-box {
-    width: 500px;
-    background: $light_yellow;
-    padding: 15px;
-    border: 3px solid rgb(150, 150, 150);
-    box-shadow: 0 0 0 1px $gray,
-      inset 0 0 0 1px $gray,
-      1px 2px 0 2px #646464;
-    border-radius: 10px;
+  &__title {
+    font: bold 35px $neoposteos-font;
+    color: $neo-blue;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+  }
 
-    .box-header {
-      p {
-        font: bold 35px $neoposteos_font;
-        color: $neo_blue;
-      }
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .submit-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

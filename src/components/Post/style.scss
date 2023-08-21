@@ -1,0 +1,41 @@
+@import '../../styles/constants';
+
+.post {
+  padding-left: 10px;
+  margin-bottom: 15px;
+  font-family: $roboto-font;
+  border-bottom: 1px solid $gray;
+
+  &__header {
+    display: flex;
+  }
+
+  &__user {
+    display: flex;
+    align-self: start;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  &__content {
+    padding: 15px;
+  }
+
+  &__title {
+    font-size: 15px;
+  }
+
+  &__body {
+    font-size: 12px;
+    font-weight: 150;
+  }
+
+  &__footer {
+    display: flex;
+    align-self: end;
+    margin-left: auto;
+    font-size: 10px;
+    font-weight: 100;
+  }
+}
