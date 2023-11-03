@@ -7,7 +7,7 @@ const Box = ({
   children,
   containerClassName = 'box',
 }) => (
-  <div className={`${containerClassName}`}>
+  <div className={containerClassName}>
     {children}
   </div>
 );
