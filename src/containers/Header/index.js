@@ -10,12 +10,11 @@ import './style.scss';
 const Header = () => {
   const navigate = useNavigate();
 
-  const handleLogout = (e) => {
-    logout().then(() => {
-      localStorage.removeItem('authentication');
-      navigate('/');
-    });
-  };
+  const handleLogout = () => logout().then(() => {
+    localStorage.removeItem('authentication');
+    localStorage.removeItem('currentUser');
+    navigate('/login');
+  });
 
   return (
     <header>
