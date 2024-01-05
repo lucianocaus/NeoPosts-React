@@ -12,6 +12,7 @@
     1px 2px 0 2px $dark-gray;
   border-radius: 10px;
   align-items: center;
+  flex-direction: column;
 
   &__header {
     text-align: center;
@@ -41,4 +42,22 @@
       font-weight: 100;
     }
   }
+
+  &__actions {
+    margin-top: 15px;
+
+    .newpost-btn {
+      background: $light-yellow;
+      color: $dark-gray;
+      font: 600 1rem $retro-font;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
 }

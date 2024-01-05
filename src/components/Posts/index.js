@@ -5,7 +5,7 @@ import { Hearts } from 'react-loader-spinner';
 import { getPosts } from 'api/post.service';
 
 import Post from 'components/Post';
-import Box from '../Box';
+import Box from 'components/Box';
 
 import './style.scss';
 
@@ -16,7 +16,7 @@ const Posts = () => {
   useEffect(() => {
     getPosts()
       .then((response) => {
-        setPosts(response);
+        setPosts(response.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)));
       })
       .catch(() => {
         toast.error('There was an error. Please try again later.');

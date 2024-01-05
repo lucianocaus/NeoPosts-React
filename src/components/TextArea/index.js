@@ -3,26 +3,38 @@ import propTypes from 'prop-types';
 
 import './style.scss';
 
-const Input = forwardRef(({
+const TextArea = forwardRef(({
   placeholder = '',
   id,
   type = 'text',
+  rows = 7,
+  cols = 50,
   ...props
 }, ref) => (
-  <input
+  <textarea
     ref={ref}
     className="retro-input"
     placeholder={placeholder}
     id={id}
     type={type}
+    rows={rows}
+    cols={cols}
     {...props}
   />
 ));
 
-Input.propTypes = {
+TextArea.propTypes = {
   placeholder: propTypes.string,
   id: propTypes.string.isRequired,
   type: propTypes.string,
+  rows: propTypes.oneOfType([
+    propTypes.string,
+    propTypes.number,
+  ]),
+  cols: propTypes.oneOfType([
+    propTypes.string,
+    propTypes.number,
+  ]),
 };
 
-export default Input;
+export default TextArea;
