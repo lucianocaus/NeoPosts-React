@@ -8,11 +8,13 @@ const Button = ({
   buttonClassName,
   text,
   disabled,
+  onClick = () => {},
   type = 'button',
 }) => (
   <button
     className={classnames('button', buttonClassName)}
     disabled={disabled}
+    onClick={onClick}
     // eslint-disable-next-line react/button-has-type
     type={type}
   >
@@ -25,6 +27,7 @@ Button.propTypes = {
   buttonClassName: PropTypes.string,
   text: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 export default Button;
