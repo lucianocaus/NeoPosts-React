@@ -1,0 +1,50 @@
+@import '../../styles/constants';
+
+.user {
+  padding: 0 0 10px 10px;
+  margin-bottom: 15px;
+  font-family: $roboto-font;
+  border-bottom: 1px solid $gray;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    object-fit: cover;
+  }
+
+  &__data {
+    padding-left: 10px;
+    font-family: $roboto-font;
+    text-align: start;
+    font-size: 15px;
+
+    .nickname {
+      font-weight: bold;
+    }
+
+    .email {
+      font-weight: 100;
+    }
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: 30px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    min-width: 150px;
+    width: 150px;
+  }
+
+  .follow-btn {
+    background: #a3bd8b;
+  }
+
+  .unfollow-btn {
+    background: #de8681;
+  }
+}

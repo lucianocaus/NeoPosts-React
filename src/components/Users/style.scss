@@ -1,0 +1,12 @@
+@import '../../styles/constants';
+
+.users {
+  flex: 1;
+  justify-content: center;
+  padding: 20px 75px;
+
+  &__loader {
+    justify-content: center;
+    display: flex;
+  }
+}
