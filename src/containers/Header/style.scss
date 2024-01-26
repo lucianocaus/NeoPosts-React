@@ -5,7 +5,6 @@ header {
 
   nav {
     display: flex;
-    justify-content: space-between;
     padding: 8px;
 
     .header {
@@ -20,6 +19,7 @@ header {
 
       &__item {
         display: flex;
+        width: 100%;
         align-items: center;
         padding-right: 25px;
         font: bold 25px $neoposteos-font;
@@ -27,6 +27,16 @@ header {
         a {
           color: black;
           text-decoration: none;
+        }
+
+        &__right {
+          margin-left: auto;
+        }
+
+        &__left {
+          a {
+            padding-left: 20px;
+          }
         }
       }
     }

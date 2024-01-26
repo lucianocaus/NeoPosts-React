@@ -27,14 +27,24 @@ const Header = () => {
         <div className="header__item">
           {
             localStorage.getItem('authentication') ? (
-              <Link
-                to="/"
-                onClick={handleLogout}
-              >
-                Logout
-              </Link>
+              <>
+                <div className="header__item__left">
+                  <Link to="/users">Users</Link>
+                  <Link to="/">Posts</Link>
+                </div>
+                <div className="header__item__right">
+                  <Link
+                    to="/"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </Link>
+                </div>
+              </>
             ) : (
-              <Link to="login">Login</Link>
+              <div className="header__item__right">
+                <Link to="login">Login</Link>
+              </div>
             )
           }
         </div>
