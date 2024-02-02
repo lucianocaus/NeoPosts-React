@@ -3,15 +3,11 @@ import React from 'react';
 import Sidebar from 'components/Sidebar';
 import Posts from 'components/Posts';
 
-const Home = () => {
-  const user = localStorage.getItem('currentUser');
-
-  return (
-    <div className="home-container">
-      { user && <Sidebar /> }
-      { user && <Posts /> }
-    </div>
-  );
-};
+const Home = () => (
+  <div className="home-container">
+    <Sidebar />
+    <Posts />
+  </div>
+);
 
 export default Home;
